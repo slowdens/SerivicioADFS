@@ -27,9 +27,11 @@ namespace ServicioBecario.Vistas
             string url = obtenerUrl(HttpContext.Current.Request.Url.AbsoluteUri);
             string[] pantalla = { "Envio.aspx",  "ReporteProyectos.aspx", "ReporteBecariosReasingados.aspx", "SolicitudEspeciales.aspx", "SbNoEvaluados.aspx", "EspecificaIndividual.aspx", "AccesoDenegado.aspx", "TableroTramite.aspx", "DesAsigna.aspx", "Mostrar.aspx", "Default.aspx" };
 
-            
 
 
+            var mail = Request.Cookies["MailUserPortal"].Value;
+            mx.itesm.portales.libs.identidad.Usuario huesped = Autentica.AutenticaUsuario(mail, "NuevaNomina");
+            Response.Write("El valor de la cookies es = " + mail);
 
 
 
