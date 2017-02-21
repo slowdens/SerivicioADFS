@@ -12,10 +12,17 @@ namespace ServicioBecario.Vistas
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            string hola;
+
             var mail = Request.Cookies["MailUserPortal"].Value;
+            hola = "MailusertPorta " + mail+"<br/>";
+            
             mx.itesm.portales.libs.identidad.Usuario huesped = Autentica.AutenticaUsuario(mail, "NuevaNomina");
-            Response.Write("El valor de la cookies es = " + mail + " <br/>");
-            Response.Write(" La nomina es := " + huesped.Nomina + " <br/>");
+            //Response.Write("El valor de la cookies es = " + mail + " <br/>");
+            //Response.Write(" La nomina es := " + huesped.Nomina + " <br/>");
+            hola += "Nomina = " + huesped.Nomina + "<br/>";
+                Label1.Text=hola;
+
         }
     }
 }

@@ -7,7 +7,10 @@
             <img src="../images/BecaBecario2.png" id="imgDefault" />
             <asp:Label runat="server" ID="lbletiqueta"></asp:Label>
         </div>
+
     </div> 
+
+      <asp:Label runat="server" ID="Label1"></asp:Label>
     <script type="text/javascript">
         $(document).ready(function () {
             Ajuste();
