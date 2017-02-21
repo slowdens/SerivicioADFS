@@ -19,8 +19,6 @@ namespace ServicioBecario.Vistas
             hola = "MailusertPorta " + mail+"<br/>";
 
             mx.itesm.portales.libs.identidad.Usuario huesped = Autentica.AutenticaUsuario(mail, clave);
-            //Response.Write("El valor de la cookies es = " + mail + " <br/>");
-            //Response.Write(" La nomina es := " + huesped.Nomina + " <br/>");
             hola += "Nomina = " + huesped.Nomina + "<br/>";
             hola+="Nombre = "+huesped.Nombre+" <br/>";
             hola+="Imss = "+huesped.Imss+ " <br/>";
