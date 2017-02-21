@@ -13,40 +13,40 @@ namespace ServicioBecario.Vistas
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string hola;
-            string clave = ConfigurationManager.AppSettings["clave"].ToString();
-            var mail = Request.Cookies["MailUserPortal"].Value;
-            hola = "MailusertPorta " + mail+"<br/>";
+            //string hola;
+            //string clave = ConfigurationManager.AppSettings["clave"].ToString();
+            //var mail = Request.Cookies["MailUserPortal"].Value;
+            //hola = "MailusertPorta " + mail+"<br/>";
 
-            mx.itesm.portales.libs.identidad.Usuario huesped = Autentica.AutenticaUsuario(mail, clave);
-            hola += "Nomina = " + huesped.Nomina + "<br/>";
-            hola+="Nombre = "+huesped.Nombre+" <br/>";
-            hola+="Imss = "+huesped.Imss+ " <br/>";
-            hola += "campus = " + huesped.ClaveCampus + " <br/>";
-            hola += "ApellidoMaterno = " + huesped.ApellidoMaterno + " <br/>";
-            hola += "ApellidoPaterno = " + huesped.ApellidoPaterno + " <br/>";
-            hola += "AreaPersonal = " + huesped.AreaPersonal + " <br/>";
-            hola += "ClaveCampus = " + huesped.ClaveCampus + " <br/>";
-            hola += "ClaveCoas = " + huesped.ClaveCoas + " <br/>";
-            hola += "ClaveContrato = " + huesped.ClaveContrato + " <br/>";
-            hola += "ClaveInstitucion = " + huesped.ClaveInstitucion + " <br/>";
-            hola += "ClavePuesto  = " + huesped.ClavePuesto + " <br/>";
-            hola += "ClaveRectoria  = " + huesped.ClaveRectoria + " <br/>";
-            hola += "ClaveUnidadOrg  = " + huesped.ClaveUnidadOrg + " <br/>";
-            hola += "CURP  = " + huesped.CURP + " <br/>";
-            hola += "DescCampus   = " + huesped.DescCampus + " <br/>";
-            hola += "DescContrato   = " + huesped.DescContrato + " <br/>";
-            hola += "DescPuesto   = " + huesped.DescPuesto + " <br/>";
-            hola += "DescRectoria   = " + huesped.DescRectoria + " <br/>";
-            hola += "DescUnidadOrg   = " + huesped.DescUnidadOrg + " <br/>";
-            hola += "Division   = " + huesped.Division + " <br/>";
-            hola += "Email   = " + huesped.Email + " <br/>";
-            hola += "Estatus   = " + huesped.Estatus + " <br/>";
-            hola += "FechaGraciaAcad   = " + huesped.FechaGraciaAcad + " <br/>";
-            hola += "FechaGraciaAdmv   = " + huesped.FechaGraciaAdmv + " <br/>";
-            hola += "FechaNacimiento   = " + huesped.FechaNacimiento + " <br/>";
-            hola += "GrupoPersonal   = " + huesped.GrupoPersonal + " <br/>";
-                Label1.Text=hola;
+            //mx.itesm.portales.libs.identidad.Usuario huesped = Autentica.AutenticaUsuario(mail, clave);
+            //hola += "Nomina = " + huesped.Nomina + "<br/>";
+            //hola+="Nombre = "+huesped.Nombre+" <br/>";
+            //hola+="Imss = "+huesped.Imss+ " <br/>";
+            //hola += "campus = " + huesped.ClaveCampus + " <br/>";
+            //hola += "ApellidoMaterno = " + huesped.ApellidoMaterno + " <br/>";
+            //hola += "ApellidoPaterno = " + huesped.ApellidoPaterno + " <br/>";
+            //hola += "AreaPersonal = " + huesped.AreaPersonal + " <br/>";
+            //hola += "ClaveCampus = " + huesped.ClaveCampus + " <br/>";
+            //hola += "ClaveCoas = " + huesped.ClaveCoas + " <br/>";
+            //hola += "ClaveContrato = " + huesped.ClaveContrato + " <br/>";
+            //hola += "ClaveInstitucion = " + huesped.ClaveInstitucion + " <br/>";
+            //hola += "ClavePuesto  = " + huesped.ClavePuesto + " <br/>";
+            //hola += "ClaveRectoria  = " + huesped.ClaveRectoria + " <br/>";
+            //hola += "ClaveUnidadOrg  = " + huesped.ClaveUnidadOrg + " <br/>";
+            //hola += "CURP  = " + huesped.CURP + " <br/>";
+            //hola += "DescCampus   = " + huesped.DescCampus + " <br/>";
+            //hola += "DescContrato   = " + huesped.DescContrato + " <br/>";
+            //hola += "DescPuesto   = " + huesped.DescPuesto + " <br/>";
+            //hola += "DescRectoria   = " + huesped.DescRectoria + " <br/>";
+            //hola += "DescUnidadOrg   = " + huesped.DescUnidadOrg + " <br/>";
+            //hola += "Division   = " + huesped.Division + " <br/>";
+            //hola += "Email   = " + huesped.Email + " <br/>";
+            //hola += "Estatus   = " + huesped.Estatus + " <br/>";
+            //hola += "FechaGraciaAcad   = " + huesped.FechaGraciaAcad + " <br/>";
+            //hola += "FechaGraciaAdmv   = " + huesped.FechaGraciaAdmv + " <br/>";
+            //hola += "FechaNacimiento   = " + huesped.FechaNacimiento + " <br/>";
+            //hola += "GrupoPersonal   = " + huesped.GrupoPersonal + " <br/>";
+            //    Label1.Text=hola;
 
         }
     }
