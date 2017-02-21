@@ -32,8 +32,8 @@ namespace ServicioBecario.Vistas
 
             var mail = Request.Cookies["MailUserPortal"].Value;
             mx.itesm.portales.libs.identidad.Usuario huesped = Autentica.AutenticaUsuario(mail, "NuevaNomina");
-            Response.Write("El valor de la cookies es = " + mail);
-            Response.Write(" La nomina es := "+huesped.Nomina);
+            Response.Write("El valor de la cookies es = " + mail +" <br/>");
+            Response.Write(" La nomina es := "+huesped.Nomina+" <br/>");
 
 
             if(!string.IsNullOrEmpty(Session["usuario"].ToString()))
