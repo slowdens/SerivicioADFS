@@ -9,6 +9,7 @@ using System.Data;
 using System.Configuration;
 using Microsoft.SharePoint.Client;
 using Microsoft.SharePoint.Client.UserProfiles;
+using mx.itesm.portales.libs.identidad;
 
 
 namespace ServicioBecario.Vistas
