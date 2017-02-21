@@ -23,7 +23,7 @@ namespace ServicioBecario
         string query;
         DataTable dt;
         BasedeDatos db = new BasedeDatos();
-        
+        string clave = ConfigurationManager.AppSettings["clave"].ToString();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -40,7 +40,7 @@ namespace ServicioBecario
                     var mail = Request.Cookies["MailUserPortal"].Value;                    
                     string area="",grupo="";
                     int campus;
-                    mx.itesm.portales.libs.identidad.Usuario huesped = Autentica.AutenticaUsuario(mail, "NuevaNomina");
+                    mx.itesm.portales.libs.identidad.Usuario huesped = Autentica.AutenticaUsuario(mail, clave);
                     Response.Write("El valor de la cookies es = "+mail);
                     if(string.IsNullOrEmpty(huesped.AreaPersonal))
                     {

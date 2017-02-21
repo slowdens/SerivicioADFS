@@ -1,6 +1,7 @@
 ﻿using mx.itesm.portales.libs.identidad;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -13,11 +14,11 @@ namespace ServicioBecario.Vistas
         protected void Page_Load(object sender, EventArgs e)
         {
             string hola;
-
+            string clave = ConfigurationManager.AppSettings["clave"].ToString();
             var mail = Request.Cookies["MailUserPortal"].Value;
             hola = "MailusertPorta " + mail+"<br/>";
-            
-            mx.itesm.portales.libs.identidad.Usuario huesped = Autentica.AutenticaUsuario(mail, "NuevaNomina");
+
+            mx.itesm.portales.libs.identidad.Usuario huesped = Autentica.AutenticaUsuario(mail, clave);
             //Response.Write("El valor de la cookies es = " + mail + " <br/>");
             //Response.Write(" La nomina es := " + huesped.Nomina + " <br/>");
             hola += "Nomina = " + huesped.Nomina + "<br/>";
