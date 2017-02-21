@@ -1,0 +1,362 @@
+
+a{
+	cursor:pointer;
+}
+a:focus,a:hover{
+	text-decoration: none;
+	cursor:pointer;
+}
+
+.Navegacion{
+	top:0px;
+	left: 0px;
+	width:250px;
+	height: 100%;
+	background-color:#233646;
+	position:relative;
+	color:#fff;
+	text-align: center;
+     z-index:1001;
+    
+}
+.Navegacion>a{
+	box-sizing:none;
+	-webkit-box-sizing:none;
+	display: block;
+   
+}
+.Contenido{
+	top: 0px;
+	left:250px;
+	width: 100%;
+}
+.contMenu{
+	list-style: none;
+	text-align: center;
+    position:absolute;
+}
+.MenuPadre{
+	margin: 0em;
+	color:#a6b0c1;
+	padding-top: 10px;
+	padding-left: 30px;
+	text-align: left;
+	vertical-align: middle;
+	left: 0px;
+	width: 98%-30px;
+	height: 50px;
+	text-decoration: none;
+	display: block;
+	border-top: 1px solid #2f4050;
+	border-bottom: 1px solid #2f4050;
+	background:#2f4050 url(../images/hpV.png) no-repeat right center;
+	background-size: 10px 10px;
+    transition: all 0.5s ease;
+}
+.MenuPadre:hover{
+    color:#FFF;  
+    padding-left:40px;
+}
+
+.MenuHijo{
+	margin: 0em;
+	color:#d8d8d8;
+	padding-top: 10px;
+	padding-left: 50px;
+	text-align: left;
+	vertical-align: middle;
+	left: 0px;
+	width: calc(98%-50px);
+	height: 40px;
+	text-decoration: none;
+	display: block;
+	border-top: 1px solid #2f4050;
+	border-bottom: 1px solid #2f4050;
+	background-color:#2f4050;
+	background-size: 10px 10px;
+	z-index: 2000;
+    transition: all 0.5s ease;
+}
+.MenuHijo:hover{
+	
+	color:#fff;
+	padding-left:60px;
+}
+
+.ContAll{
+            background-color:#eee;
+            border:1px solid #eee;
+        }
+#dos{
+    padding-bottom:15px;
+    background-color:#233646;
+}
+
+
+.CHijo{
+	display:none;
+	border-left: 6px solid #23c6c8;
+	z-index: 999;
+}
+.ContenidoArticle{
+	top: 30px;
+	left: 260px;
+	background-color: #fff;
+    position:absolute;
+    padding-left:20px;
+    opacity:0;
+   
+     padding-bottom:15px;
+     padding-right:10px;
+}
+.ContenidoFooter
+{
+	width: 100%;
+	height: 100px;
+    position:absolute;
+    background-color: #233646;
+}
+#contLogo{
+	text-align: center;
+	vertical-align: middle;
+	height: 200px;
+	width: 200px;
+}
+.col-md-12, .col-sm-12, .col-xs-12, .col-lg-12, .table-condensed, .row, .jumbotron,article{
+  z-index:998; 
+}
+
+.TituloH{
+    margin: 0em;
+	color:#d8d8d8;
+	padding-top: 10px;
+	padding-left: 2px;
+	text-align: center;
+	vertical-align: middle;
+	left: 0px;
+	width: 98%-50px;
+	height: 50px;
+	text-decoration: none;
+	display: none;
+	border-top: 0px solid #2f4050;
+	border-bottom: 1px solid #2f4050;
+	background-color: #282828;
+	background-size: 10px 10px;
+	z-index: 2000;
+    transition: all 0.5s ease;
+	font-weight: bold;
+    border-left:0;
+}
+.TituloH:hover{
+	color: #fff;
+}
+#LogoT{
+	width: 100px;
+	height: 100px;
+}
+.descP{
+    display:inline;
+}
+
+@media all and (max-width:1000px) {
+    .descP {
+        display: none;
+    }
+
+    #LogoT {
+        width: 75px;
+        height: 75px;
+    }
+
+    .Navegacion {
+        width: 75px;
+        height: 100%;
+        position:relative;
+    }
+
+    .TituloH {
+        display: block;
+    }
+
+    .ContenidoArticle {
+        left: 75px;
+      
+    }
+
+    .MenuPadre {
+        background-size: 10px 10px;
+        border-bottom: 1px solid #2f4050;
+        border-left: 0px;
+    }
+
+    .CHijo {
+        left: 74px;
+        width: 200px;
+        z-index: 999;
+        position: relative;
+        top:-49px;
+        height: 0;
+        border:0;
+
+    }
+
+
+    .MenuHijo{
+        padding-left: 3px;
+        left: -6px;
+        height: 30px;
+        z-index: 0 !important;
+        display: block;
+        transition: all 0.5s ease;
+        padding-bottom:5px;
+        padding-top:5px
+    }
+
+        .MenuHijo:hover {
+            padding-left: 10px;
+        }
+}
+
+
+.fondo{
+    z-index:0;
+}
+
+ .Elementos{
+			    position: fixed;
+			    top: 1200px;
+			    margin: 0 auto;
+			    width: 100%;
+			    text-align: center;
+		
+		    }
+            .linkaviso{
+            position:center;
+            top:-56px;
+            right:0px;
+           
+         
+        }
+        #imagendatos{
+            height:100px;
+            width:100px;
+        }
+        .Target{
+            box-shadow:3px 3px 3px #d8d8d8;
+            border-top:3px solid #ffa133;
+            border-left:3px solid #335473;
+            border-right:3px solid #ffed4f;
+            border-bottom:3px solid #3abdab;
+        }
+        .table tr{
+            border-top:0;
+            border-bottom:0;
+        }
+        .Nomina{
+            color:#FFF;
+            text-align:left;
+            height:50px;
+            padding-top:18px;
+            margin:0;
+            padding:0;
+            background-color:#3abdab;
+        }
+        .Nombre{
+            color:#FFF;
+            text-align:left;
+            height:50px;
+            padding-top:18px;
+            margin:0;
+            padding:0;
+            background-color:#d9464c;
+        }
+        .Proyecto{
+            color:#FFF;
+            text-align:left;
+            height:50px;
+            padding-top:18px;
+            margin:0;
+            padding:0;
+            background-color:#335473;
+        }
+        .Solicitud{
+            color:#335473;
+            text-align:left;
+            height:50px;
+            padding-top:18px;
+            margin:0;
+            padding:0;
+            background-color:#ffed4f;
+            
+        }
+        .Reglamento{
+            position:fixed;
+            height:40px;
+            width:90px;
+            background-color:#a50404;
+            color:#FFF;
+            border-bottom-left-radius:3px;
+            border-top-left-radius:3px;
+            top:32px;
+            right:0px;
+            padding-top:9px;
+            padding-left:9px;
+            z-index: 1999;
+  
+        }
+       .Reglamento:after {
+        content: "";
+        position: absolute;
+        z-index: 1001;
+        border: 0 solid #a50404;
+        border-top: 20px solid transparent;
+        border-left-width: 10px;
+        border-top-width: 20px;
+        top: 0;
+        right:-10px;
+}
+  
+        .Reglamento:before {
+        content: "";
+        position: absolute;
+        z-index: 1001;
+        border: 0 solid #a50404;
+        border-bottom: 20px solid transparent;
+        border-left-width: 10px;
+        border-bottom-width: 20px;
+        top: 19px;
+        right: -10px;
+}
+        .IconoReglamento{
+        width:100px;
+        height:125px; 
+        right:-100px;
+        top:50px;
+        position:fixed;
+        z-index:1998;
+}
+        .Opacar{
+            transition:all 0.5s ease;
+        }
+        .Opacar:hover{
+            font-size:18px;
+        }
+       .img-contenedor img {
+-webkit-transition:all .9s ease; /* Safari y Chrome */
+-moz-transition:all .9s ease; /* Firefox */
+-o-transition:all .9s ease; /* IE 9 */
+-ms-transition:all .9s ease; /* Opera */
+width:100%;
+}
+.img-contenedor:hover img {
+-webkit-transform:scale(1.25);
+-moz-transform:scale(1.25);
+-ms-transform:scale(1.25);
+-o-transform:scale(1.25);
+transform:scale(1.25);
+}
+.img-contenedor {/*Ancho y altura son modificables al requerimiento de cada uno*/
+width:80px;
+height:80px;
+overflow:hidden;
+}

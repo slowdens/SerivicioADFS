@@ -1,0 +1,361 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="ServicioBecario.Vistas.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=10,chrome=1" />
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" id="ResponsivoMeta"/>
+    <script src="../scripts/boostrapt/js/jquery-1.11.1.min.js"> </script> 
+    <script type="text/javascript" src="../scripts/boostrapt/js/jquery-1.11.1.js"></script>    
+    <script src="../scripts/PlantillaZul/Script/jquery.browser.min.js"></script>
+    
+    
+    <link rel="stylesheet"  href="../scripts/boostrapt/css/Propias.css" type="text/css"/> 
+    <link rel="stylesheet" href="../scripts/boostrapt/css/bootstrap.min.css"  />
+    <link rel="stylesheet" href="../scripts/boostrapt/css/bootstrap-theme.min.css"  />
+    <link rel="stylesheet" type="text/css" href="../scripts/boostrapt/css/estilos.css"/>                             
+    
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700" rel="stylesheet" type="text/css" />         
+    <link rel="stylesheet" type="text/css" href="../scripts/boostrapt/css/simple-sidebar.css"/>           
+    <script src="../scripts/boostrapt/js/bootstrap.min.js"></script>
+    <link href="../scripts/PlantillaZul/CSS/MiPlantilla.css" rel="stylesheet" />
+    
+    
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body>
+  
+    <form id="form1" runat="server">
+            <asp:ScriptManager EnablePageMethods="true" ID="ScriptManager1" runat="server" LoadScriptsBeforeUI="true" AsyncPostBackTimeout="360000"
+                EnableScriptGlobalization="true" EnableScriptLocalization="true">                
+            </asp:ScriptManager>
+
+        <style type="text/css">
+            #RetContenido{
+	            display:block;
+            }
+            /*body{
+                background-color:#233646;
+            }*/
+            .fondoP{
+	            width: 100%;
+	            height: 100px;
+	           
+                font-size: 10px;
+	            background-color: #233646;
+	            color:#fff;
+	            text-align: center;
+               
+            } 
+            .Perfil{
+                text-align:right;
+                top:-1px;
+                height:34px;
+                width:100%;
+                position:fixed;
+                z-index:3000;
+                background-color:#336699;
+                color:#FFF;
+                box-shadow:3px 3px 3px #000;
+                padding-top:2px;
+                padding-bottom:2px;
+                padding-right:5px;
+                text-shadow:2px 2px 2px #000;
+            }
+            .iconoPerfil{
+                width:30px;
+                height:30px;
+                border-radius:50%;
+            }
+             .Help{
+               display:none;
+               padding:10px;
+               background-color:#3498db;
+               border:1px solid #3498db;
+               box-shadow: 3px 3px 3px #555;
+               position:absolute;
+               margin-top:-25px;
+               margin-left:40px;
+               z-index:5000;
+               color:#fff;
+               font-style:normal;
+           }
+           .Help:after {
+        content: "";
+        position: absolute;
+        z-index: 1001;
+        border: 0 solid #3498db;
+        border-bottom: 11px solid transparent;
+        border-right-width: 10px;
+        border-bottom-width: 11px;
+        top: 10px;
+        left:-10px;
+}
+  
+        .Help:before {
+        content: "";
+        position: absolute;
+        z-index: 1001;
+        border: 0 solid #3498db;
+        border-top: 11px solid transparent;
+        border-right-width: 10px;
+        border-top-width: 11px;
+        top: -1px;
+        left: -10px;
+}
+          
+</style>
+       
+    
+
+        <div class="Perfil">
+             <asp:Label runat="server" Text="" ID="lblNominaMaster">
+             </asp:Label><asp:ImageButton ID="btnCerrar" runat="server" ImageUrl="~/images/Cerrar.png" Width="15px" Height="15px" OnClick="btnCerrar_Click"/>
+            <span style="width:10px;padding-right:10px"></span>
+            <asp:Label ID="lblRol" runat="server"> </asp:Label><img src="../images/ProfesorPerfil.png" class="iconoPerfil" /></div>
+        <asp:HiddenField ID="Hdfusuario" runat="server" />
+        <nav class="Navegacion">
+                <br/><br/><br/>
+            <img id="LogoT" src="../scripts/PlantillaZul/images/Logotipo.png"/>
+		        <br/><br/><br/>	        
+            <div id="dos">
+                
+            </div>
+                
+	</nav>
+		<div id="RetContenido">
+	<section class="ContenidoArticle">
+		<article>
+            <div class="row" ><div class="col-md-12"><br /></div></div>
+            <div class="row" ><div class="col-md-12"><br /></div></div>
+               
+             
+             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">        
+            </asp:ContentPlaceHolder>
+       </article>
+	</section>
+	<aside>
+
+	</aside>
+	</div>
+           
+
+	
+       
+    </form>
+    <script src="../scripts/PlantillaZul/Script/PlantillaMenu.js"></script> 
+    <script type="text/javascript">
+        $(window).resize(function () {
+      
+            foot();
+            CalcAncho()
+        });
+        $(window).scroll(function () {
+            ScrollResponsive();
+            foot();
+        });
+       
+
+        $(document).ready(function () {
+            foot();
+            CalcAncho()
+            $(".ContenidoArticle").animate({ "opacity": "1", "padding-left": "10px" }, 2000);
+            var al = $(document).height();
+            var anc = $(document).width();
+            $(".Navegacion").css({ "height": al });
+            $(".ContenidoFooter").css({ "top": al, "width": anc });
+            //Sacamos el perfil
+            var s_usuario = $("#Hdfusuario").val();
+            $.ajax({
+                type: "POST",
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                data: '{p_usuario:"' + s_usuario + '"}',
+                url: "Metodos.aspx/generaMenu",
+                success: function (dd) {
+                    var dato = dd.d
+                    $("#dos").html(dato);
+                   PosicionarMenu();
+                }
+            });
+            AltoArticle();
+        });
+
+        
+        function AltoArticle()
+        {
+            var tp = $(".fondoP").css("top");
+            var top = parseInt(tp.substring(0, tp.length - 2));
+            $(".Navegacion").css({ "height": top+"px" });
+        }
+   
+        function PosicionarMenu() {
+           
+            var url = document.URL;
+            var urlC = url.split("?");
+            var elem = urlC[0].split("/");
+            var archivo = elem[elem.length - 1];
+            var bandera = 0;
+            if (localStorage["UrlActual"] != null) {
+                if (localStorage["UrlActual"] != archivo) {
+                    localStorage["UrlAnterior"] = localStorage["UrlActual"];
+                    localStorage["UrlActual"] = archivo;
+                }
+            } else { localStorage["UrlActual"] = archivo; }
+           // console.log("Actual: " + localStorage["UrlActual"] + " Anterior:" + localStorage["UrlAnterior"]);
+            var all = document.getElementsByClassName("MenuHijo");
+            for (x = 0; x < all.length; x++) {
+                var hrefA = all[x].href;
+                var arr = hrefA.split("/");
+                if (arr[arr.length - 1] == archivo) {
+                    Pintar(all[x].id)
+                    bandera = 1;
+                }
+            }
+            if (bandera == 0) {
+                var hrefA = localStorage["UrlAnterior"];
+                for (x = 0; x < all.length; x++) {
+                    var hrefA = all[x].href;
+                    var arr = hrefA.split("/");
+                    if (arr[arr.length - 1] == localStorage["UrlAnterior"]) {
+                        Pintar(all[x].id);
+                    }
+                }
+            }
+        }
+        function Pintar(id) {
+            $("#" + id).css({ "background": "linear-gradient(to right,#23c6c8,#233646)","text-shadow":"2px 2px 2px #000" });
+            var padre = document.getElementById(id).parentNode;
+            var P = padre.id.substring(0, 1);
+            var ancho = $(window).width();
+            if (ancho > 1000) {
+                VerHijos(P);
+            }
+        }
+        function foot()
+        {
+            var mayor=0;
+            var altoMenu = $("#dos").height();
+            var altoArt = $(".ContenidoArticle").height();
+            var ventana = $(window).height();
+            //alert(scroll + "  " + altoMenu + "  " + altoArt + " " + ventana);
+            if (altoMenu > altoArt)
+            {
+                if(altoMenu>ventana)
+                {
+                    mayor= altoMenu+210;
+                } else {
+                    mayor = ventana;
+                }
+            } else if(altoArt>ventana) {
+                mayor = altoArt+50;
+            } else {
+                mayor = ventana;
+            }
+            
+            $(".fondoP").css({ "top": mayor + "px", "position": "absolute" });
+            AltoArticle();
+        }
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////Aqui Comienzan los Menús alternos///////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        $(document).ready(function () {
+            if (localStorage["Bandera"] != 0) { BTN(1); } else { BTN(0); }
+           
+            $("#btnA").click(function () {
+                BTN(1);
+            });
+            $("#btnB").click(function () {
+                BTN(0);
+            });
+        });
+
+        function BTN(id) {
+
+            if (id == 1) {
+                localStorage["Bandera"] = 1;
+                $("#btnA").css({
+                    "background": "none",
+                    "background-color": "#eee",
+                    "border-bottom-left-radius": "0px",
+                    "border-bottom-right-radius": "0px",
+                    "border-bottom": "none",
+                    "box-shadow": "1px 2px #eee",
+                    "color": "#000",
+                    "border-top": "1px solid #eee",
+                    "border-left": "1px solid #eee",
+                    "border-right": "1px solid #eee"
+                });
+                $("#btnB").css({
+                    "background": "#428bca",
+                    "background-color": "#428bca",
+                    "border-bottom-left-radius": "0px",
+                    "border-bottom-right-radius": "0px",
+                    "border-bottom": "none",
+                    "box-shadow": "0px px ##428bca",
+                    "color": "#FFF",
+                    "border-top": "1px solid #428bca",
+                    "border-left": "1px solid #428bca",
+                    "border-right": "1px solid #428bca"
+                });
+
+                $("#ContAg").css({ "display": "block" });
+                $("#ContBu").css({ "display": "none" });
+            } else {
+                localStorage["Bandera"] = 0;
+                $("#btnB").css({
+                    "background": "none",
+                    "background-color": "#eee",
+                    "border-bottom-left-radius": "0px",
+                    "border-bottom-right-radius": "0px",
+                    "border-bottom": "none",
+                    "box-shadow": "1px 2px #eee",
+                    "color": "#000",
+                    "border-top": "1px solid #eee",
+                    "border-left": "1px solid #eee",
+                    "border-right": "1px solid #eee"
+                });
+                $("#btnA").css({
+                    "background": "#428bca",
+                    "background-color": "#428bca",
+                    "border-bottom-left-radius": "0px",
+                    "border-bottom-right-radius": "0px",
+                    "border-bottom": "none",
+                    "box-shadow": "0px px ##428bca",
+                    "color": "#FFF",
+                    "border-top": "1px solid #428bca",
+                    "border-left": "1px solid #428bca",
+                    "border-right": "1px solid #428bca"
+                });
+                $("#ContBu").css({ "display": "block" });
+                $("#ContAg").css({ "display": "none" });
+            }
+            
+            AltoArticle();
+        }
+
+        function CalcAncho() {
+            var wi = $(window).width();
+            if (wi > 983) {
+                $(".ContenidoArticle").css({ "width": (wi - 280) + "px" });
+            } else {
+                $(".ContenidoArticle").css({ "width": (wi - 90) + "px" });
+            }
+
+        }
+
+    </script>
+    <footer class="fondoP">
+D.R.&#169; Instituto Tecnol&#243;gico y de Estudios Superiores de Monterrey, M&#233;xico. 2016. | <a target="_blank" href="http://www.itesm.mx/wps/wcm/connect/ITESM/Tecnologico+de+Monterrey/Herramientas/Politicas+de+privacidad/">Pol&#237;ticas de privacidad</a> | <a target="_blank" href="http://www.itesm.mx/wps/wcm/connect/ITESM/Tecnologico+de+Monterrey/Herramientas/Aviso+de+privacidad/Aviso+de+privacidad+empleados/"> Aviso de privacidad</a> 
+<br /></footer> 
+
+</body>
+
+</html>

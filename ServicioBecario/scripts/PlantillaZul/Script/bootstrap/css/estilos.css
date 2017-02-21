@@ -1,0 +1,112 @@
+.table-responsive>.table>tbody>tr>td{
+	white-space: normal;
+}
+.icono{
+	padding-top: 22px;
+	padding-right: 10px;
+	padding-left: 10px;
+	float: left;
+	width: 34;
+	height: 34;	
+}
+
+.form-float {
+	float: left;
+}
+
+p{
+	display: block;
+}
+.cajagris {
+	background-color:#EEEEEE;
+	padding:20px;
+	padding-bottom:5px;
+	padding-top:5px;
+	margin-top:30px;
+	margin-bottom:20px;
+}
+.titulocaja {
+	font-size:17px;
+	font-weight:400;
+	margin-bottom:-20px;
+	}
+.borderless tbody tr td, .borderless thead tr th {
+    border: none;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+.padd{
+	padding-top: 7px;
+}
+.textodirectorio1 {
+	font-size:18px;
+	font-weight:300;
+	line-height:1em;
+	color:#999;
+	margin-bottom:-6px;
+	margin-top:30px;
+}
+.textodirectorio2 {
+	font-size:18px;
+	font-weight:300;
+	line-height:1em;
+	color:#999;
+	margin-bottom:-6px;
+}
+.titulo1 {
+	font-size:17px;
+	font-weight:400;
+}
+.borderless2 td {
+    border: none;
+}
+.text-muted{
+	font-size: 12px;
+}
+td:not(:first-child){
+	font-size: 14px;
+}
+h1{font-size:24px; padding-top:4px; padding-bottom:6px;}
+body{font-size:13px;font-family: 'open sans';}
+.jumbotron{padding:10px;margin-bottom:15px;margin-top:25px;color:inherit;background-color:#eee;}
+.list-group-item{line-height: 100%;}
+.btn{font-size:12px;}
+.control-label{line-height: 100%;}
+.textodirectorio1{padding-bottom:10px;}
+
+.img-ejemplo {
+	border-style: solid;
+	border-width: 1px;
+}
+.arriba{
+	vertical-align: top;
+	
+}
+.letra{
+    font-size:13px;
+    font-family: 'open sans';
+}
+.letraSinegritas{
+    font-size:13px;
+    font-family: 'open sans';
+    font-weight:100;
+    
+}
+
+ .modalBackground
+ {
+     background-color:black;
+     filter:alpha(opacity=90);
+     opacity:0.8;
+     z-index:100000;
+}
+
+ hr { 
+  background-color: black;
+  height: 1px;
+  width:100%;
+}
+
+
+
+ 

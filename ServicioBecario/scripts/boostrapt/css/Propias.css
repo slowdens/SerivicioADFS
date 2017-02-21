@@ -1,0 +1,60 @@
+﻿/****Mis classes*******/
+ .modalBackground1
+    {
+      background-color:black;
+     filter:alpha(opacity=90);
+     opacity:0.5;
+     z-index:100000;
+    }
+    .modalPopup
+    {
+        background-color: #FFFFFF;
+        width: 300px;
+        border: 3px solid #0DA9D0;
+    }
+    .modalPopup .header
+    {
+        background-color: #3B83C0;
+        height: 30px;
+        color: White;
+        line-height: 30px;
+        text-align: center;
+        font-weight: bold;
+    }
+    .modalPopup .body
+    {
+        min-height: 50px;
+        line-height: 30px;
+        text-align: center;
+        font-weight: bold;
+    }
+    .modalPopup .footer
+    {
+        padding: 3px;
+    }
+    .modalPopup .yes, .modalPopup .no
+    {
+        height: 23px;
+        color: White;
+        line-height: 23px;
+        text-align: center;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .modalPopup .yes
+    {
+        background-color: #3B83C0;
+        border: 1px solid #3B83C0;
+    }
+    .modalPopup .no
+    {
+        background-color: #3B83C0;
+        border: 1px solid #3B83C0;
+    }
+
+    .tirtulor
+    {
+        color:#0000cc;
+        font-family:"open sans";
+        font-size:15px;
+    }

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:tns="http://InformacionLaboral" targetNamespace="http://InformacionLaboral" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" ibmSchExtn:docRoot="true" name="consultaInformacionLaboral">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element minOccurs="1" maxOccurs="1" name="idPersona" nillable="true" type="xsd:string" />
+        <xsd:element minOccurs="0" maxOccurs="1" name="cveSociedad" nillable="true" type="xsd:string" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" ibmSchExtn:docRoot="true" name="consultaInformacionLaboralResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="responseInformacionLaboral" nillable="true" type="tns:responseInformacionLaboralType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" ibmSchExtn:docRoot="true" name="sayHello">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element minOccurs="1" maxOccurs="1" name="name" nillable="true" type="xsd:string" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" ibmSchExtn:docRoot="true" name="sayHelloResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="responseSayHello" nillable="true" type="tns:responseSayHelloType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" ibmSchExtn:docRoot="true" name="obtieneInfoSistema">
+    <xsd:complexType>
+      <xsd:sequence />
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" ibmSchExtn:docRoot="true" name="obtieneInfoSistemaResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="responseobtieneInfoSistema" nillable="true" type="tns:responseObtieneInfoSistemaType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="responseSayHelloType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="1" name="codResponse" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="descResponse" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="responseObtieneInfoSistemaType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="1" name="codResponse" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="descResponse" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="responseInformacionLaboralType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="1" name="codResponse" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="descResponse" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="InformacionLaboral" type="tns:InformacionLaboralType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="InformacionLaboralType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="1" name="Nomina" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="Contrato" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="NombreCompleto" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="Nombre" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="apellidoPaterno" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="apellidoMaterno" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="Sociedad" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="descSociedad" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="Division" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="descDivision" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="SubDivision" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="descSubDivision" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="Funcion" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="descFuncion" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="UnidadOrganizacional" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="descUnidadOrganizacional" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="EstatusEmpleado" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="descEstatusEmpleado" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="AreaPersonal" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="descAreaPersonal" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="GrupoPersonal" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="descGrupoPersonal" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="fechaNacimiento" type="xsd:date" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="correoElectronico" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="Ubicacion" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="descUbicacion" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="rfc" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="curp" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="fechaFinContrato" type="xsd:date" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="frecuenciaPago" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="recontrato" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="Titulo" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="Extension" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="Intercampus" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

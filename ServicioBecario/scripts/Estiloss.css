@@ -1,0 +1,62 @@
+﻿body {
+    /*font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    src:local('Open Sans Light');
+    unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;*/
+}
+
+		.grid 
+		{
+			width: 40%;
+			border-width:0px;
+			font-size:11px;
+		}
+
+        .grid caption 
+        {
+	        background:#f9f9f9 url(images/captionbckg.gif) repeat-x;
+	        color:#15428B;
+	        text-align:left;
+	        line-height:22px;
+	        font-size:11px;
+	        font-weight:bold;
+	        padding-top:2px;
+	        padding-left:2px;
+	        font-family:tahoma,arial,verdana,sans-serif;
+        }
+        .hscrollbar
+         {
+            overflow-x: auto; /*for horizontal scroll bar */
+            overflow-y: hidden; /*for hiding vertical scroll bar */
+         } 
+        .vscrollbar
+        {
+            overflow-x: hidden; /*for hiding horizontal scroll bar*/
+            overflow-y: auto; /*for vertical scroll bar*/
+        } 
+        .grid table 
+        {
+        	border:solid 1px #99BBE8;
+        	height:30px;
+	    }
+	        
+        .grid th
+        {
+	        background:transparent url(images/thbackground.gif) repeat;
+            height:19px;
+            border:solid 1px #99BBE8;
+            font-weight:normal;
+        }
+
+        .grid td
+        {
+	        border:1px solid #99BBE8;
+            color:Black;
+            height:30px;
+        }
+
+        .simple{
+            font-weight:normal;
+        }
+

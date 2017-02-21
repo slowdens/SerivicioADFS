@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://InformacionLaboral" name="InformacionLaboral" targetNamespace="http://InformacionLaboral" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation>
+    <wsdl:appinfo source="WMQI_APPINFO">
+      <MRWSDLAppInfo imported="true">
+        <binding hasEncoding="false" imported="true" name="InformacionLaboralHttpBinding" originalBindingStyle="document" />
+      </MRWSDLAppInfo>
+    </wsdl:appinfo>
+  </wsdl:documentation>
+  <wsdl:types>
+    <xsd:schema xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" targetNamespace="http://InformacionLaboral">
+      <xsd:include schemaLocation="http://esbsvr01.itesm.mx:80/ESB/TyC/InformacionLaboral?xsd=xsd0" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="consultaInformacionLaboralRequestMsg">
+    <wsdl:part name="consultaInformacionLaboralParameters" element="tns:consultaInformacionLaboral" />
+  </wsdl:message>
+  <wsdl:message name="consultaInformacionLaboralResponseMsg">
+    <wsdl:part name="consultaInformacionLaboralResult" element="tns:consultaInformacionLaboralResponse" />
+  </wsdl:message>
+  <wsdl:message name="sayHelloRequestMsg">
+    <wsdl:part name="sayHelloParameters" element="tns:sayHello" />
+  </wsdl:message>
+  <wsdl:message name="sayHelloResponseMsg">
+    <wsdl:part name="sayHelloResult" element="tns:sayHelloResponse" />
+  </wsdl:message>
+  <wsdl:message name="obtieneInfoSistemaRequestMsg">
+    <wsdl:part name="obtieneInfoSistemaParameters" element="tns:obtieneInfoSistema" />
+  </wsdl:message>
+  <wsdl:message name="obtieneInfoSistemaResponseMsg">
+    <wsdl:part name="obtieneInfoSistemaResult" element="tns:obtieneInfoSistemaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="InformacionLaboral">
+    <wsdl:operation name="consultaInformacionLaboral">
+      <wsdl:input name="consultaInformacionLaboralRequest" message="tns:consultaInformacionLaboralRequestMsg" />
+      <wsdl:output name="consultaInformacionLaboralResponse" message="tns:consultaInformacionLaboralResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="sayHello">
+      <wsdl:input name="sayHelloRequest" message="tns:sayHelloRequestMsg" />
+      <wsdl:output name="sayHelloResponse" message="tns:sayHelloResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="obtieneInfoSistema">
+      <wsdl:input name="obtieneInfoSistemaRequest" message="tns:obtieneInfoSistemaRequestMsg" />
+      <wsdl:output name="obtieneInfoSistemaResponse" message="tns:obtieneInfoSistemaResponseMsg" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="InformacionLaboralHttpBinding" type="tns:InformacionLaboral">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="consultaInformacionLaboral">
+      <soap:operation soapAction="http://InformacionLaboral/consultaInformacionLaboral" />
+      <wsdl:input name="consultaInformacionLaboralRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="consultaInformacionLaboralResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sayHello">
+      <soap:operation soapAction="http://InformacionLaboral/sayHello" />
+      <wsdl:input name="sayHelloRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="sayHelloResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtieneInfoSistema">
+      <soap:operation soapAction="http://InformacionLaboral/obtieneInfoSistema" />
+      <wsdl:input name="obtieneInfoSistemaRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="obtieneInfoSistemaResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="InformacionLaboralHttpService">
+    <wsdl:port name="InformacionLaboralHttpPort" binding="tns:InformacionLaboralHttpBinding">
+      <soap:address location="http://esbsvr01.itesm.mx:80/ESB/TyC/InformacionLaboral" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
